@@ -14,7 +14,7 @@ function Banner() {
 
     <div className="main-banner absolute">
 <div className="machine-bort  ">
-<div className="div grid grid-cols-[15%_85%] gap-[6] pl-[80px] m-auto max-w-[90%]">
+<div className="div grid grid-cols-[15%_83%] gap-[6] m-auto max-w-[90%]">
 <div className="py-[50px]">
          <img
         src="/image/airoplan.png" 
@@ -28,12 +28,12 @@ function Banner() {
 
     <div className="bussnius-side ">
    <div className="bussnius rounded-[20px]">
-        <div className="heading flex items-center gap-[5px]">
+        <div className="heading flex items-center justify-center gap-[5px]">
            <div className="">
            <img 
                 width={38}
                 height={38}                 
-                 src="/image/hand.png"
+                 src="/image/hnd.png"
                  alt="hand"
             />
            </div>
@@ -71,14 +71,13 @@ function Banner() {
 
 <div className="ASSISTANT">
 <div className="assistant-left">
-<div className="assistant-top h-[80px] flex flex-col justify-between text-center m-[10px]">
-    <div className="py-[20px]">
+<div className="assistant- h-[80px] flex flex-col  text-center ">
+    <div className="pt-[20px]">
     <Heading level={5}>TRAVEL ASSISTANT</Heading>
     </div>
     <Heading level={6}>Lorem Ipsum has been the industry's.</Heading>
     </div>
     <div className="assistant-bottom m-[10px]">
-    <Heading level={5}>TRAVEL ASSISTANT</Heading>
     <img className="w-[100%]" src="/image/mens.png" alt="" />
     </div>
 </div>
@@ -92,9 +91,6 @@ function Banner() {
   <img src="/image/tall.png" alt="" />
   <img src="/image/tall.png" alt="" />
 </div>
-<div className="student absolute top-[60%]">
-<img src="/image/student.png" alt="" />
-</div>
 </div>
 </div>
 </div>
@@ -102,7 +98,7 @@ function Banner() {
    </div>
     <div className="man">
       <img alt="machine" className="w-[100%]"  src="/image/center.png"/>
-      <div className="man-p absolute top-[42%]">
+      <div className="man-p absolute top-[20%]">
       <img alt="machine"   src="/image/robo.png"/>
       </div>
     </div>
@@ -156,7 +152,7 @@ function Banner() {
     </div>
     
     </div>
-    <div className="heading-right">
+    <div className="heading-right flex flex-col justify-center items-center">
     <Heading level={4}>Explore the world’s most stunning seasides</Heading>
     <div className="level px-[20px] pt-[40px]">
       <img src="/image/level.png" alt="" />
@@ -166,7 +162,7 @@ function Banner() {
  </div>
 </div>
       
-     <div className=" relative transform rotate-x-[45deg]    top-[95%]">
+     <div className=" relative w-[90%] transform left-[8%] rotate-x-[90deg]  top-[-40px]">
      <Steps/>
      </div>
     </div>

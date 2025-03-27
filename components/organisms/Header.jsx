@@ -16,9 +16,6 @@ function Header() {
             <div className="">
                 <Navigation/>
             </div>
-            <div className="">
-                <Button variant="signup">SignUp</Button>
-            </div>
         </div>
      </div>
      </Container>

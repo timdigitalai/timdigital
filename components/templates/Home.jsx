@@ -8,7 +8,7 @@ import Signal from '../atoms/Signal'
 
 function Home() {
   return (
-    <div>
+    <div className='Home'>
         <Header/>
         <Banner/>
         {/* <Steps/> */}

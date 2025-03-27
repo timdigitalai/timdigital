@@ -1,38 +1,46 @@
-"use client"; // Next.js 13+ ke liye zaroori hai agar hooks use kar rahe hain
-
+"use client";
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Active route check karne ke liye
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
-  const pathname = usePathname(); // Current route ka path milega
-
+  const pathname = usePathname();
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Media", href: "/services" },
-    { name: "Advertise", href: "/ali" },
+    { name: "Media", href: "/media" },
+    { name: "Advertise", href: "/advertise" },
     { name: "Contact Us", href: "/contact" },
   ];
 
   return (
-    <nav className="p-4">
-      <ul className="flex gap-[30px] ">
-        {navItems.map((item) => (
-          <li key={item.href}>
-            <Link
-              href={item.href}
-              className={`text-[#848484] px-3 py-2 rounded-md text-lg font-medium transition duration-300
-                ${
-                  pathname === item.href
-                    ? "bg-white shadow-[2px_2px_12.8px_0px_#0000005E] text-[#848484] font-bold"
-                    : "hover:bg-white hover:shadow-[2px_2px_12.8px_0px_#0000005E]"
+    <nav
+      className="p-4"
+      style={{
+        background:
+          "linear-gradient(352.96deg, rgba(79, 187, 234, 0.5) 6.97%, rgba(200, 237, 240, 0.5) 50.03%, rgba(79, 187, 234, 0.5) 102.26%)",
+        borderRadius: "40px",
+      }}
+    >
+      <ul className="flex gap-[30px]">
+        {navItems.map((item) => {
+          const isActive = pathname === item.href;
+
+          return (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className={`px-4 py-2 rounded-full text-lg font-medium transition duration-300 ${
+                  isActive
+                    ? "text-white bg-gradient-to-r from-[#4FBBEA] via-[#72d3f3] to-[#4FBBEA] shadow-md"
+                    : "text-[#848484] hover:text-[#4FBBEA]"
                 }`}
-            >
-              {item.name}
-            </Link>
-          </li>
-        ))}
+              >
+                {item.name}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

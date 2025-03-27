@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  background: radial-gradient(58.06% 114.05% at 59.79% 46.87%, #AEE4E6 0%, #EBFBFF 47.4%, #FAE4CE 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+background: radial-gradient(58.06% 114.05% at 59.79% 46.87%, #AEE4E6 0%, #EBFBFF 47.4%, #FAE4CE 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
-}
+} 
 .container_main {
     max-width: 100%;
     margin: 0 auto;
@@ -60,6 +60,7 @@ body {
 .assistant-bottom {
   box-shadow: 2px 0px 7px 0px #00000078;
   background: #C3C3C3A8;
+  border-radius: 10px;
 }
 
 .assistant-right{
@@ -117,11 +118,11 @@ body {
 }
 
 .man-p {
-  top: 27%;
+  top: 23%;
   z-index: 1111;
   overflow: visible;
   height: 432px;
-  left: 56%;
+  left: 55%;
   transform: translateX(-50%);
 }
 .man-p img {
@@ -134,3 +135,36 @@ body {
   margin-left: 90px;
   margin-top: -55px;
 }
+
+
+.mySwiper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5); /* Background color */
+  color: white; /* Icon color */
+  font-size: 16px; /* Icon size ko chota kar diya */
+  width: 40px; /* Button width kam ki */
+  height: 40px; /* Button height kam ki */
+  border-radius: 50%; /* Circle shape maintain */
+  display: flex;
+  justify-content: center;
+  margin-top: -9%;
+  align-items: center;
+}
+
+/* Agar icon aur chota chahiye */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px; /* Default 20px hota hai, isko chota kar diya */
+}
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 10px;
+  z-index: 10 !important;
+}
+

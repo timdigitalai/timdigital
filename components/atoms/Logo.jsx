@@ -23,7 +23,7 @@ Logo.propTypes = {
 
 const LogoData = [
   {
-    href: '#',
+    href: '/',
     src: '/image/logo.png',
     alt: 'logo'
   }
