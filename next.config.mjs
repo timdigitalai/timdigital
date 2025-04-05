@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    experimental: {
-      appDir: true, // Important for Next.js 13+ users
-    },
-  };
-  
-  export default nextConfig;
-  
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
+  images: {
+    domains: ['i.pravatar.cc'], // Allowed external image domain
+  },
+};
+
+export default nextConfig;
