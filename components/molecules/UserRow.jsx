@@ -14,7 +14,7 @@ const UserRow = ({ name, email, status, image }) => {
       </div>
 
       <span
-        className={`text-sm font-semibold px-2 py-1 rounded-full ${
+        className={`text-sm  px-2 py-1 rounded-full ${
           status === "Active"
             ? "bg-green-100 text-green-700"
             : "bg-yellow-100 text-yellow-700"

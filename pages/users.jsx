@@ -1,6 +1,7 @@
 import Sidebar from "@/components/organisms/Sidebar";
 import  UsersTable  from "../components/organisms/UsersTable";
 import { RiResetRightFill } from "react-icons/ri";
+import Topbar from "@/components/organisms/Topbar";
 
 const dummyUsers = Array(10).fill({
   id: "#USR003",
@@ -16,12 +17,8 @@ export default function UsersPage() {
   return (
   <div className="main flex">
     <Sidebar/>
-      <div className="p-6 w-[100%]">
-      <h1 className="text-xl font-semibold text-[#4FBBEA] mb-1">User Management</h1>
-      <p className="text-sm text-gray-500 mb-4">
-        Manage And Monitor User Accounts Across The Platform
-      </p>
-
+      <div className=" w-[100%]">
+        <Topbar text={"User Management"} p={"Manage And Monitor User Accounts Across The Platform"}/>
       {/* Filters/Search */}
       <div className="flex justify-between flex-wrap gap-4 mb-4 items-center">
         <input

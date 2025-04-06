@@ -1,9 +1,13 @@
+import ReviewsTop from "@/components/molecules/ReviewsTop";
 import Sidebar from "@/components/organisms/Sidebar";
 import Topbar from "@/components/organisms/Topbar";
 import { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaFlag } from "react-icons/fa";
+import { MdOutlineReviews } from "react-icons/md";
+import { FaCheck } from "react-icons/fa6";
+import { MdBlockFlipped } from "react-icons/md";
 
-const reviews = [
+  const reviews = [
   {
     status: "Approved",
     business: "San Francisco, CA",
@@ -104,9 +108,42 @@ export default function ReviewsManagementPage() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-1 flex flex-col">
-        <Topbar />
-        <div className="p-6 flex-1 flex gap-6">
+      <div className="flex-1 py-[20px] bg-white flex flex-col">
+        <Topbar text={"Reviews"} />
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-white shadow-md pt-[30px] pb-[20px] mx-6  px-6 lg:grid-cols-4 gap-4 mb-6">
+        <ReviewsTop
+  icon={<FaFlag />}
+  title="12"
+  change="Total Reported"
+  iconColor="#317D9D"       // Red color
+  iconBg="#E0F6FF"           // Light red background
+/>
+<ReviewsTop
+  icon={<MdOutlineReviews />
+  }
+  title="12"
+  change="Total Reported"
+  iconColor="#854D0E"       // Red color
+  iconBg="#FFFAC1"           // Light red background
+/>
+<ReviewsTop
+  icon={<FaCheck />
+  }
+  title="12"
+  change="Total Reported"
+  iconColor="#166534"       // Red color
+  iconBg="#DCFCE7"           // Light red background
+/>
+<ReviewsTop
+  icon={<MdBlockFlipped />
+  }
+  title="12"
+  change="Total Reported"
+  iconColor="#DC2626"       // Red color
+  iconBg="#FFE6E6"           // Light red background
+/>
+      </div>
+        <div className="px-6 py-2 flex-1 flex gap-6">
           {/* Left Panel: Reviews List */}
           <div className="w-[75%]">
             <div className="mb-4 flex gap-4 items-center">

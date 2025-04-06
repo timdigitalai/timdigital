@@ -1,4 +1,5 @@
 import Sidebar from "@/components/organisms/Sidebar";
+import Topbar from "@/components/organisms/Topbar";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 
@@ -76,13 +77,9 @@ export default function BusinessListPage() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="p-6 w-full">
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-bold">Business Listings Management</h1>
-        </div>
-        <p className="mb-4 text-sm text-gray-500">Total Pending Businesses: 40</p>
-
-        <div className="flex justify-between gap-4 mb-6">
+      <div className="w-full">
+        <Topbar text={"Business Listings Management"} p={"Total pending businesses:40"}/>
+        <div className="flex justify-between gap-4 my-6 px-6">
         <div className="w-[30%]">
         <input
             type="text"
@@ -133,7 +130,7 @@ export default function BusinessListPage() {
        </div>
         </div>
 
-        <div className="border rounded overflow-hidden">
+        <div className="border px-6 rounded overflow-hidden">
           <table className="min-w-full text-sm text-left">
             <thead className="bg-gray-100 border-b">
               <tr>

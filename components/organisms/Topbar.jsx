@@ -1,11 +1,15 @@
 import { FaSearch, FaBell, FaUserCircle } from 'react-icons/fa';
 
-const Topbar = () => {
+const Topbar = ({text, p}) => {
   return (
     <div className="bg-white border-b border-gray-200">
-      <div className="px-6 py-4 flex items-center justify-between">
-        <h1 className="text-2xl font-semibold text-gray-800">Dashboard</h1>
-        
+      <div className="px-6 py-[4px] flex items-center justify-between">
+       <div className=''>
+       <h1 className="text-2xl font-semibold text-gray-800">{text}</h1>
+        <p className="text-sm text-gray-500 mb-4">
+        {p}
+      </p>
+       </div>
         <div className="flex items-center space-x-4">
           <div className="relative">
             <input
