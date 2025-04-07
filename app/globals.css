@@ -80,6 +80,7 @@ background: radial-gradient(58.06% 114.05% at 59.79% 46.87%, #AEE4E6 0%, #EBFBFF
   background: linear-gradient(115.26deg, #D5D5D5 8.9%, #ACACAC 110.34%);
   margin: 0 10px;
   border-radius: 20px;
+  height: 200px;
 }
 
 .travel-mbl-cir-top{

@@ -10,9 +10,9 @@ import Steps from "../molecules/Steps";
 
 function Banner() {
   return (
-    <div className="main-banner absolute w-full overflow-x-hidden">
-      <div className="machine-bort relative z-10">
-        <div className="grid grid-cols-[15%_83%] gap-[6px] mx-auto max-w-[100%]">
+    <div className="main-banner relative w-full  overflow-hidden max-w-screen">
+      <div className="machine-bort relative">
+        <div className="grid grid-cols-[15%_83%] gap-[6px] mx-auto max-w-full">
           {/* Left Plane Image */}
           <div className="py-[50px]">
             <img src="/image/airoplan.png" className="w-full" alt="airoplan" />
@@ -77,9 +77,9 @@ function Banner() {
             </div>
 
             {/* Center Image Section */}
-            <div className="man">
+            <div className="man ">
               <img alt="machine" className="w-full" src="/image/center.png" />
-              <div className="man-p absolute top-[20%]">
+              <div className="man-p absolute ml-[-2%] mt-[8%]">
                 <img alt="robo" src="/image/robo.png" />
               </div>
             </div>
@@ -98,7 +98,7 @@ function Banner() {
                   <div className="bussnius-g-main">
                     <div className="buss-left pl-[15px] pr-[30px] pt-[10px] gap-2">
                       <Paragraph>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        Lorem umair Ipsum has been the industry's standard dummy text ever since the 1500s.
                       </Paragraph>
                     </div>
                   </div>
@@ -126,18 +126,18 @@ function Banner() {
             </div>
 
             {/* Final Text + Graphic Section */}
-            <div className="heading-right flex flex-col justify-center items-center">
+            <div className="heading-right px-[10px] flex flex-col justify-center items-center">
               <Heading level={4}>Explore the world’s most stunning seasides</Heading>
-              <div className="level px-[20px] pt-[40px]">
-                <img src="/image/level.png" alt="" />
+              <div className="level pt-[40px]">
+                <img className="w-[70%]" src="/image/level.png" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Steps Component - shifted down slightly */}
-      <div className="relative w-[90%] left-[5%] top-[-20px] z-0">
+      {/* Steps Component */}
+      <div className="relative w-[90%] left-[5%] mt-[-6%] z-0">
         <Steps />
       </div>
     </div>

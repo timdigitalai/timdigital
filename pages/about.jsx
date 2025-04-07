@@ -8,14 +8,13 @@ function About() {
   return (
     <div>
       <Header />
-         <Container> 
-      <div className=' flex justify-between pt-[60px] gap-[30px]'>
-        <Aboutleft />
-        <Aboutright />
-      </div>
-    </Container>
+      <Container>
+        <div className="flex flex-col lg:flex-row justify-between items-center pt-[60px] gap-[40px] lg:gap-[80px] max-w-7xl mx-auto px-4">
+          <Aboutleft />
+          <Aboutright />
+        </div>
+      </Container>
     </div>
-   
   );
 }
 
