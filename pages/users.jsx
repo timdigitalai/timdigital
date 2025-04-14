@@ -20,7 +20,7 @@ export default function UsersPage() {
       <div className=" w-[100%]">
         <Topbar text={"User Management"} p={"Manage And Monitor User Accounts Across The Platform"}/>
       {/* Filters/Search */}
-      <div className="flex justify-between flex-wrap gap-4 mb-4 items-center">
+      <div className="flex justify-between pt-[20px] px-6 flex-wrap gap-4 mb-4 items-center">
         <input
           type="text"
           placeholder="Search User"

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Heading from "../atoms/Heading";
-import '../../app/globals.css';
+import "../../app/globals.css";
 import Paragraph from "../atoms/Paragraph";
 import Button from "../atoms/Button";
 import Header from "./Header";
@@ -10,16 +10,16 @@ import Steps from "../molecules/Steps";
 
 function Banner() {
   return (
-    <div className="main-banner relative w-full  overflow-hidden max-w-screen">
-      <div className="machine-bort relative">
-        <div className="grid grid-cols-[15%_83%] gap-[6px] mx-auto max-w-full">
+    <div className="main-banner relative w-full overflow-hidden">
+      <div className="machine-bort relative max-w-[1324px] mx-auto px-4">
+        <div className="grid grid-cols-1 xl:grid-cols-[15%_83%] gap-[6px]">
           {/* Left Plane Image */}
           <div className="py-[50px]">
             <img src="/image/airoplan.png" className="w-full" alt="airoplan" />
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid grid-cols-[30%_30%_24%_20%] gap-[6px]">
+          <div className="grid grid-cols-[30%_25%_25%_20%] gap-4">
             {/* Business Login Section */}
             <div className="bussnius-side">
               <div className="bussnius rounded-[20px]">
@@ -33,11 +33,16 @@ function Banner() {
                   </div>
                   <div className="bussnius-g-main flex items-center gap-2">
                     <div className="g-im h-[165px] flex-shrink-0">
-                      <img className="h-[165px]" alt="girl" src="/image/left-g.png" />
+                      <img
+                        className="h-[165px] md:h-auto"
+                        alt="girl"
+                        src="/image/left-g.png"
+                      />
                     </div>
                     <div className="buss-left pl-[8px] flex flex-col gap-2">
                       <Paragraph>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s.
                       </Paragraph>
                       <div className="btn flex gap-2">
                         <Button variant="signup">LOGIN</Button>
@@ -56,7 +61,9 @@ function Banner() {
                       <div className="pt-[20px]">
                         <Heading level={5}>TRAVEL ASSISTANT</Heading>
                       </div>
-                      <Heading level={6}>Lorem Ipsum has been the industry's.</Heading>
+                      <Heading level={6}>
+                        Lorem Ipsum has been the industry's.
+                      </Heading>
                     </div>
                     <div className="assistant-bottom m-[10px]">
                       <img className="w-full" src="/image/mens.png" alt="" />
@@ -64,7 +71,11 @@ function Banner() {
                   </div>
                 </div>
                 <div className="assistant-right rounded-[10px]">
-                  <img className="w-full p-[20px]" src="/image/Frame1.png" alt="" />
+                  <img
+                    className="w-full p-[20px]"
+                    src="/image/Frame1.png"
+                    alt=""
+                  />
                   <div className="tall relative">
                     <div className="tall-image pt-[10px] flex gap-[8px] justify-center">
                       {[...Array(4)].map((_, i) => (
@@ -76,11 +87,21 @@ function Banner() {
               </div>
             </div>
 
-            {/* Center Image Section */}
-            <div className="man ">
+            <div className="man relative">
               <img alt="machine" className="w-full" src="/image/center.png" />
-              <div className="man-p absolute ml-[-2%] mt-[8%]">
-                <img alt="robo" src="/image/robo.png" />
+              <div
+                className="man-p absolute"
+                style={{
+                  top: "42%",
+                  left: "5%",
+                  transform: "scale(1.6) translate(-0%, -0%)",
+                }}
+              >
+                <img
+                  alt="robo"
+                  src="/image/robo.png"
+                  className="w-[900px] h-[450px] object-contain"
+                />
               </div>
             </div>
 
@@ -98,7 +119,8 @@ function Banner() {
                   <div className="bussnius-g-main">
                     <div className="buss-left pl-[15px] pr-[30px] pt-[10px] gap-2">
                       <Paragraph>
-                        Lorem umair Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        Lorem umair Ipsum has been the industry's standard dummy
+                        text ever since the 1500s.
                       </Paragraph>
                     </div>
                   </div>
@@ -127,7 +149,9 @@ function Banner() {
 
             {/* Final Text + Graphic Section */}
             <div className="heading-right px-[10px] flex flex-col justify-center items-center">
-              <Heading level={4}>Explore the world’s most stunning seasides</Heading>
+              <Heading level={4}>
+                Explore the world’s most stunning seasides
+              </Heading>
               <div className="level pt-[40px]">
                 <img className="w-[70%]" src="/image/level.png" alt="" />
               </div>
@@ -137,7 +161,7 @@ function Banner() {
       </div>
 
       {/* Steps Component */}
-      <div className="relative w-[90%] left-[5%] mt-[-6%] z-0">
+      <div className="relative w-full max-w-[1324px] mx-auto mt-[-2%] z-0 px-4">
         <Steps />
       </div>
     </div>

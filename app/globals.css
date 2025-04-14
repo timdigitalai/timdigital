@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.home {
 background: radial-gradient(58.06% 114.05% at 59.79% 46.87%, #AEE4E6 0%, #EBFBFF 47.4%, #FAE4CE 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
 } 
@@ -137,11 +137,26 @@ background: radial-gradient(58.06% 114.05% at 59.79% 46.87%, #AEE4E6 0%, #EBFBFF
   margin-top: -55px;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 .mySwiper {
   width: 100%;
   height: auto;
   position: relative;
+}
+.contactp {
+  background-image: 
+    linear-gradient(147.76deg, rgba(47, 113, 159, 0.1) 0%, #4FBBEA 102%),
+    url(/image/handshake.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* optional - adjust as needed */
+  color: white;       /* if text is there */
+  padding-bottom: 50px;
 }
 
 .swiper-button-next,

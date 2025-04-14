@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -13,6 +13,7 @@ import Header from "@/components/organisms/Header";
 import Heading from "@/components/atoms/Heading";
 
 const Media = () => {
+  const [imageHeight, setImageHeight] = useState(300); // Initial height of image
   const items = [
     {
       id: 1,
@@ -44,11 +45,30 @@ const Media = () => {
     },
   ];
 
+  // Handle Ctrl + Press event to change image height
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.ctrlKey) {
+        setImageHeight(450); // Increase height when Ctrl is pressed
+      } else {
+        setImageHeight(300); // Default height when Ctrl is not pressed
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener("keyup", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener("keyup", handleKeyPress);
+    };
+  }, []);
+
   return (
-    <div className="overflow-x-hidden pb-[50px]">
+    <div className="overflow-x-hidden min-h-screen bg-white">
       <Header />
       <Container>
-        <div className="text-center">
+        <div className="text-center ">
           <Heading level={7}>Media</Heading>
         </div>
 
@@ -68,39 +88,35 @@ const Media = () => {
         >
           {items.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className=" shadow-md p-4 rounded-lg h-full flex flex-col justify-between">
+              <div className="shadow-md p-4 rounded-lg h-full flex flex-col justify-between min-h-[450px]">
                 <Image
                   src={item.image}
                   alt="Photography"
                   width={500}
-                  height={300}
-                  className="w-full h-52 object-cover rounded-lg"
+                  height={imageHeight}
+                  className="w-full object-cover rounded-lg"
                 />
-                <p className="text-black font-[400] text-[16px] mt-4">{item.date}</p>
-                <p className="text-black font-[300] text-[16px] mt-2">{item.description}</p>
-                <button className="text-blue-500 mt-2 hover:underline">View →</button>
+                <p className="text-black font-medium text-base mt-4">{item.date}</p>
+                <p className="text-black font-light text-base mt-2 line-clamp-4">{item.description}</p>
+                <button className="text-blue-500 mt-2 hover:underline self-start">View →</button>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* Pagination Buttons and Social Icons */}
-        <div className="flex flex-col lg:flex-row justify-between items-center mt-10 gap-6">
+        <div className="flex flex-col lg:flex-row justify-between items-center mt-12 gap-6">
           {/* Pagination */}
-          <div className="flex space-x-2">
-            <button className="bg-gray-200 px-4 py-2 rounded" aria-label="Previous Page">
-              Previous
-            </button>
+          <div className="flex flex-wrap space-x-2">
+            <button className="bg-gray-200 px-4 py-2 rounded">Previous</button>
             <button className="bg-blue-500 text-white px-4 py-2 rounded">1</button>
             <button className="bg-gray-200 px-4 py-2 rounded">2</button>
             <button className="bg-gray-200 px-4 py-2 rounded">3</button>
-            <button className="bg-gray-200 px-4 py-2 rounded" aria-label="Next Page">
-              Next
-            </button>
+            <button className="bg-gray-200 px-4 py-2 rounded">Next</button>
           </div>
 
           {/* Social Icons */}
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-3">
             <Social href="#" icon={FaFacebook} />
             <Social href="#" icon={FaTwitter} />
             <Social href="#" icon={FaInstagram} />

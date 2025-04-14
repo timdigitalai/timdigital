@@ -9,34 +9,36 @@ const Button = ({ href, children, variant, onClick }) => {
 
   switch (variant) {
     case "primary":
-      buttonStyle = "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition";
+      buttonStyle =
+        "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition";
       break;
     case "signup":
       buttonStyle =
         "bg-white text-[#55DCEB]  px-4 py-2 text-sm rounded-[13px] border-[1px] border-[#55DCEB] transition  shadow-[2px_2px_12.8px_0px_#0000005E]";
       break;
-      case "white":
-        buttonStyle =
-          "bg-white text-[#8484849E]  px-[10px] py-[5px] text-[14px] font-[700] rounded-[13px] border-[1px] border-[#B0B0B0CC] transition  shadow-[#0000002E]";
-        break;
-        case "login":
-        buttonStyle =
-          "bg-white text-white login w-[70%] px-[10px] py-2 text-[14px] font-[700] rounded-[10px] border-[1px] border-[#B0B0B0CC] transition  shadow-[#0000002E]";
-        break;
-        case "black":
-          buttonStyle =
-            "text-white  w-[64%] py-[5px] bg-[#0E0E0EA3]  text-[11px] font-[700]  border-[1px] border-[#B0B0B0CC] transition  shadow-[#0000002E]";
-          break;
-          case "Aboutrig":
-          buttonStyle =
-            "text-[#59BFEB]  px-[25px] py-[10px] rounded-[13px]   text-[11px] font-[700]  border-[1px] border-[#59BFEB] transition  shadow-[#0000005E]";
-          break;
-          case "ris":
-            buttonStyle =
-              "text-white bg-[linear-gradient(90deg,#4FBBEA_0%,#A4DDF5_100%)] shadow-[0px_4px_4px_0px_#5046E459]  px-[20px] py-[10px] rounded-[5px]   text-[15px] font-[500]   transition ";
-            break;
+    case "white":
+      buttonStyle =
+        "bg-white text-[#8484849E]  px-[10px] py-[5px] text-[14px] font-[700] rounded-[13px] border-[1px] border-[#B0B0B0CC] transition  shadow-[#0000002E]";
+      break;
+    case "login":
+      buttonStyle =
+        "bg-white text-white login w-[70%] px-[10px] py-2 text-[14px] font-[700] rounded-[10px] border-[1px] border-[#B0B0B0CC] transition  shadow-[#0000002E]";
+      break;
+    case "black":
+      buttonStyle =
+        "text-white  w-[64%] py-[5px] bg-[#0E0E0EA3]  text-[11px] font-[700]  border-[1px] border-[#B0B0B0CC] transition  shadow-[#0000002E]";
+      break;
+    case "Aboutrig":
+      buttonStyle =
+        "text-[#59BFEB]  px-[25px] py-[10px] rounded-[13px]   text-[11px] font-[700]  border-[1px] border-[#59BFEB] transition  shadow-[#0000005E]";
+      break;
+    case "ris":
+      buttonStyle =
+        "text-white bg-[linear-gradient(90deg,#4FBBEA_0%,#A4DDF5_100%)] shadow-[0px_4px_4px_0px_#5046E459]  px-[20px] py-[10px] rounded-[5px]   text-[15px] font-[500]   transition ";
+      break;
     default:
-      buttonStyle = "bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400";
+      buttonStyle =
+        "bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400";
       break;
   }
 

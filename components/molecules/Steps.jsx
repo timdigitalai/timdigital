@@ -1,75 +1,67 @@
-import React from 'react'
-import Button from '../atoms/Button'
-import Signal from '../atoms/Signal'
-import Heading from '../atoms/Heading'
+import React from "react";
+import Button from "../atoms/Button";
+import Signal from "../atoms/Signal";
+import Heading from "../atoms/Heading";
 
 function Steps() {
   return (
     <div className="steps relative w-full overflow-hidden">
       {/* Background Plate Image */}
-      <img className="absolute top-0 left-0 z-0" src="/image/plate.png" alt="" />
+      <img
+        className="w-full object-cover z-0"
+        src="/image/sah.png"
+        alt="plate background"
+      />
 
-      {/* Lock layout to 1024px width */}
-      <div className=" mx-auto relative z-10">
-        {/* Top Icons Row */}
-        <div className="flex">
-          <img className="relative top-[15px] left-[16px]" src="/image/t5.png" alt="" />
-          <img className="relative right-[142px] top-[14px]" src="/image/t4.png" alt="" />
-          <img className="relative right-[178px] top-[12px]" src="/image/t3.png" alt="" />
-          <img className="relative right-[177px] top-[13px]" src="/image/t2.png" alt="" />
-          <img className="relative right-[249px] top-[13px]" src="/image/t-1.png" alt="" />
-        </div>
-
-        {/* Bottom Section */}
-        <div className="step-bootom relative flex">
-          {/* Black Section */}
-          <div className="black relative top-[14px] left-[6%] ">
-            <img src="/image/b1.png" alt="" />
-
-            {/* Black Buttons */}
-            <div className="black-btn relative gap-2 bottom-[54%] left-[30%] flex flex-col">
-              <Button variant="black">How it works</Button>
+      {/* Content Over Image */}
+      <div className="absolute top-[60%] left-0 w-[95%] m-auto h-full flex justify-center ">
+        <div className="under grid grid-cols-[33%_37%_30%] w-[90%] max-w-[1440px] ">
+          {/* Left Side (Black + White buttons) */}
+          <div className="black-side pl-[15%] pt-[-90px]  flex  flex-col">
+            <div className="black-btn flex items-center flex-col gap-1">
+              <Button variant="black">How it Works</Button>
               <Button variant="black">Latest news</Button>
               <Button variant="black">City guide</Button>
             </div>
-
-            {/* White Buttons */}
-            <div className="travel-planer-btn bottom-[58%] left-[12%] flex flex-row gap-2 relative">
-              <Button variant={"white"}>Business Login</Button>
-              <Button variant={"white"}>Travel Planer</Button>
+            <div className="white flex gap-2 flex-wrap">
+              <Button variant="white">Business Login</Button>
+              <Button variant="white">Travel Planner</Button>
             </div>
           </div>
 
-          {/* Login Section */}
-          <div className=" top-[12px] left-[4.8%] relative">
-            <img src="/image/b2.png" alt="" />
-            <div className="login-b relative bottom-[42%] flex flex-col gap-[10px] justify-center items-center">
-              <Button variant="login">Login</Button>
-              <div className="rejister gap-[10px] flex flex-row">
-                <Button variant="white">Special Offer</Button>
-                <Button variant="white">New Registration</Button>
-              </div>
+          {/* Middle Side (Login & Other White Buttons) */}
+          <div className="middle flex flex-col items-center gap-2">
+            <Button variant="login">Login</Button>
+            <div className="flex gap-2 flex-wrap justify-center">
+              <Button variant="white">Special Offer</Button>
+              <Button variant="white">New Registration</Button>
             </div>
           </div>
 
-          {/* Wifi Section */}
-          <div className="wifi-session relative left-[3.7%]  top-[10px]">
-            <img src="/image/b3.png" alt="" />
-            <div className="wfi-btn flex gap-[20px] relative bottom-[42%] left-[20%]">
-              <div className="text-center">
-                <Signal img="/image/let.png" />
-                <Heading level="5">let’s go</Heading>
-              </div>
-              <div className="text-center">
-                <Signal img="/image/wifi.png" />
-                <Heading level="5">use Tool</Heading>
-              </div>
+          {/* Right Side (Icons with Headings) */}
+          <div className="right-s flex justify-center gap-6 items-start">
+            <div className="flex flex-col items-center">
+              <img
+                src="/image/wi.png"
+                className="w-[80%]"
+                alt="let's go icon"
+              />
+              <Heading level={13}>let’s go</Heading>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="/image/le.png"
+                className="w-[80%]"
+                alt="use tool icon"
+              />
+              <Heading level={13}>use Tool</Heading>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
+  l;
 }
 
-export default Steps
+export default Steps;
